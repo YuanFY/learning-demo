@@ -45,6 +45,30 @@ public class SortTest {
         }
     }
 
+    @Test
+    public void test_mergeSort() {
+        int[] arr = {3, 4, 1, 7, 6, 5, 2};
+        SortUtil.mergeSort(arr, 0, arr.length-1);
+        println(arr);
+        int tmp = arr[0];
+        for (int i = 1; i < arr.length; i ++)  {
+            Assert.assertTrue(tmp < arr[i]);
+            tmp = arr[i];
+        }
+    }
+
+    @Test
+    public void test_quickSort() {
+        int[] arr = {4, 7, 1, 3, 6, 5, 2};
+        SortUtil.quickSort(arr, 0, arr.length-1);
+        println(arr);
+        int tmp = arr[0];
+        for (int i = 1; i < arr.length; i ++)  {
+            Assert.assertTrue(tmp < arr[i]);
+            tmp = arr[i];
+        }
+    }
+
     private void println(int[] arr) {
         for (int i = 0; i < arr.length; i ++) {
             System.out.print(arr[i] + " ");
