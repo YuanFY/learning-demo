@@ -9,9 +9,9 @@ public class Node<T> {
     public T data;
     public Node<T> next;
 
-    Node() {}
+    public Node() {}
 
-    Node(T ele) {
+    public Node(T ele) {
         data = ele;
         next = null;
     }
