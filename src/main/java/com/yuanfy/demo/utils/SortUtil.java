@@ -221,6 +221,50 @@ public class SortUtil {
         return mid;
     }
 
+    /**
+     * 计算排序， 针对数据范围不大的不大的场景， 且 针对的是非负整数
+     */
+    public static void countingSort(int[] arr, int n) {
+        if (arr.length < 1) {
+            return ;
+        }
+
+        // 第一步：确定数据范围 -> 找到最大值
+        int max = 0;
+        for (int i = 0; i < arr.length; i ++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+
+        // 第二步：定义计数数组并初始化
+        int[] countingArr = new int[max + 1];
+        for (int i = 0; i < countingArr.length; i ++) {
+            countingArr[i] = 0;
+        }
+
+        // 第三步：计数
+        for (int i = 0; i < arr.length; i ++) {
+            countingArr[arr[i]] += 1;
+        }
+        // 数组顺序求和
+        for (int i = 1; i < countingArr.length; i ++) {
+            countingArr[i] += countingArr[i-1];
+        }
+
+        // 第四步：根据计数数组取排序结果
+        int[] result = new int[arr.length];
+        for (int i = n-1; i >= 0; i --) {
+            int index = countingArr[arr[i]] - 1;
+            result[index] = arr[i];
+            countingArr[arr[i]] -= 1;
+        }
+        // 第五步： 赋值结果
+        for (int i = 0; i < n; i ++) {
+            arr[i] = result[i];
+        }
+    }
+
 
     private static void println(int[] arr) {
         for (int i = 0; i < arr.length; i ++) {

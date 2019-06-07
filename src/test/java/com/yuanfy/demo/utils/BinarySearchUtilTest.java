@@ -63,5 +63,5 @@ public class BinarySearchUtilTest {
         idx = BinarySearchUtil.getIndex(arr2, 0);
         Assert.assertEquals(idx, 4);
     }
-    
+
 }

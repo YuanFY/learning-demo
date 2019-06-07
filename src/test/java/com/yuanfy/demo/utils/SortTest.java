@@ -69,6 +69,27 @@ public class SortTest {
         }
     }
 
+    @Test
+    public void test_countingSort() {
+        int[] arr = {4, 7, 1, 3, 6, 5, 2};
+        SortUtil.countingSort(arr, arr.length);
+        println(arr);
+        int tmp = arr[0];
+        for (int i = 1; i < arr.length; i ++)  {
+            Assert.assertTrue(tmp <= arr[i]);
+            tmp = arr[i];
+        }
+
+        int[] arr1 = {2, 5, 3, 0, 2, 3, 0, 3};
+        SortUtil.countingSort(arr1, arr1.length);
+        println(arr1);
+        tmp = arr1[0];
+        for (int i = 1; i < arr1.length; i ++)  {
+            Assert.assertTrue(tmp <= arr1[i]);
+            tmp = arr1[i];
+        }
+    }
+
     private void println(int[] arr) {
         for (int i = 0; i < arr.length; i ++) {
             System.out.print(arr[i] + " ");
