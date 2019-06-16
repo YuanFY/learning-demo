@@ -1,5 +1,6 @@
 package com.yuanfy.demo.utils;
 
+import com.yuanfy.demo.struct.heap.Heap;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -87,6 +88,35 @@ public class SortTest {
         for (int i = 1; i < arr1.length; i ++)  {
             Assert.assertTrue(tmp <= arr1[i]);
             tmp = arr1[i];
+        }
+    }
+
+    @Test
+    public void test_heapSort() {
+        int[] arr = {3, 2, 1, 4, 5};
+        Heap heap = new Heap(arr);
+        int len = arr.length;
+        heap.buildHeap(len);
+        heap.sort(len);
+        int[] arr2 = heap.get();
+        println(arr2);
+        int tmp = arr2[0];
+        for (int i = 1; i < len; i ++)  {
+            Assert.assertTrue(tmp <= arr2[i]);
+            tmp = arr2[i];
+        }
+
+        Heap heap2 = new Heap(len);
+        for (int i = 0; i < len; i ++) {
+            heap2.insert(arr[i]);
+        }
+        heap2.sort(len);
+        arr2 = heap2.get();
+        println(arr2);
+        tmp = arr2[0];
+        for (int i = 1; i < len; i ++)  {
+            Assert.assertTrue(tmp <= arr2[i]);
+            tmp = arr2[i];
         }
     }
 

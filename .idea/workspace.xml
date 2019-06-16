@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95535779-6b61-4ff4-a429-e744ecc7f159" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuanfy/demo/cache/LRUCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/yuanfy/demo/cache/LRUCacheTest.java" afterDir="false" />
+    <list default="true" id="95535779-6b61-4ff4-a429-e744ecc7f159" name="Default Changelist" comment="使用单链表实现LRU缓存淘汰">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuanfy/demo/struct/heap/Heap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanfy/demo/struct/linklist/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanfy/demo/struct/linklist/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanfy/demo/utils/SortUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanfy/demo/utils/SortUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/yuanfy/demo/utils/SortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yuanfy/demo/utils/SortTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -45,53 +46,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yuanfy/demo/cache/LRUCache.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/yuanfy/demo/cache/LRUCacheTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yuanfy/demo/struct/heap/Heap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+            <state relative-caret-position="513">
+              <caret line="75" column="29" lean-forward="true" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1715#1716#0" expanded="true" />
+                <element signature="e#1743#1744#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/yuanfy/demo/struct/linklist/SingleLinkListTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yuanfy/demo/utils/SortUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="135" column="14" selection-start-line="135" selection-start-column="14" selection-end-line="135" selection-end-column="14" />
+            <state relative-caret-position="213">
+              <caret line="265" column="5" selection-start-line="265" selection-start-column="5" selection-end-line="265" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/yuanfy/demo/utils/SortTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="113" column="20" selection-start-line="113" selection-start-column="20" selection-end-line="113" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yuanfy/demo/struct/linklist/Node.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yuanfy/demo/struct/linklist/SingleLinkList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="331" column="5" selection-start-line="323" selection-start-column="4" selection-end-line="331" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -121,6 +105,7 @@
       <find>iterator</find>
       <find>subList</find>
       <find>add(</find>
+      <find>put</find>
     </findStrings>
     <replaceStrings>
       <replace>head1</replace>
@@ -148,12 +133,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yuanfy/demo/struct/sort/BubbleSort.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yuanfy/demo/utils/BinarySearchUtil.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yuanfy/demo/utils/BinarySearchUtilTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yuanfy/demo/utils/SortUtil.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/yuanfy/demo/utils/SortTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yuanfy/demo/struct/linklist/LRUCache.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yuanfy/demo/struct/linklist/Node.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yuanfy/demo/cache/LRUCache.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yuanfy/demo/cache/LRUCacheTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yuanfy/demo/utils/SortUtil.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/yuanfy/demo/utils/SortTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yuanfy/demo/struct/heap/Heap.java" />
       </list>
     </option>
   </component>
@@ -170,7 +156,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -204,6 +189,33 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learning-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learning-demo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learning-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learning-demo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="struct" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learning-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learning-demo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="learning-demo" type="b2602c69:ProjectViewProjectNode" />
@@ -243,15 +255,19 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559896234596" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560695106076" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RunDashboard">
@@ -266,7 +282,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LRUCacheTest.test">
+  <component name="RunManager" selected="JUnit.SortTest.test_heapSort">
     <configuration name="BinarySearchUtilTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="com.yuanfy.learning-demo.test" />
       <extension name="coverage">
@@ -278,22 +294,6 @@
       <option name="PACKAGE_NAME" value="com.yuanfy.demo.utils" />
       <option name="MAIN_CLASS_NAME" value="com.yuanfy.demo.utils.BinarySearchUtilTest" />
       <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BinarySearchUtilTest.test_findFisrtEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="com.yuanfy.learning-demo.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yuanfy.demo.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.yuanfy.demo.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.yuanfy.demo.utils.BinarySearchUtilTest" />
-      <option name="METHOD_NAME" value="test_findFisrtEquals" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -347,13 +347,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SortTest.test_heapSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="com.yuanfy.learning-demo.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yuanfy.demo.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yuanfy.demo.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.yuanfy.demo.utils.SortTest" />
+      <option name="METHOD_NAME" value="test_heapSort" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SortTest.test_heapSort" />
         <item itemvalue="JUnit.LRUCacheTest.test" />
         <item itemvalue="JUnit.SortTest.test_countingSort" />
         <item itemvalue="JUnit.BinarySearchUtilTest.test1" />
         <item itemvalue="JUnit.BinarySearchUtilTest.test_getIndex" />
-        <item itemvalue="JUnit.BinarySearchUtilTest.test_findFisrtEquals" />
       </list>
     </recent_temporary>
   </component>
@@ -397,7 +413,12 @@
       <workItem from="1559224154167" duration="487000" />
       <workItem from="1559463711445" duration="1985000" />
       <workItem from="1559873882404" duration="1144000" />
-      <workItem from="1559889186816" duration="3672000" />
+      <workItem from="1559889186816" duration="3758000" />
+      <workItem from="1559917109205" duration="466000" />
+      <workItem from="1560000765492" duration="650000" />
+      <workItem from="1560572320391" duration="2470000" />
+      <workItem from="1560610227313" duration="1586000" />
+      <workItem from="1560690896556" duration="4047000" />
     </task>
     <task id="LOCAL-00001" summary="计数排序">
       <created>1559889298287</created>
@@ -406,49 +427,91 @@
       <option name="project" value="LOCAL" />
       <updated>1559889298287</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="使用单链表实现LRU缓存淘汰测了">
+      <created>1559896269171</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1559896269171</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BinarySearchUtilTest_test1 - 2019.05.28 at 22h 01m 53s.xml">
-      <configuration name="BinarySearchUtilTest.test1" configurationId="JUnit" />
+    <history-entry file="SortTest_test_heapSort - 2019.06.16 at 21h 54m 20s.xml">
+      <configuration name="SortTest.test_heapSort" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BinarySearchUtilTest_test1 - 2019.05.28 at 22h 02m 06s.xml">
-      <configuration name="BinarySearchUtilTest.test1" configurationId="JUnit" />
+    <history-entry file="SortTest_test_heapSort - 2019.06.16 at 22h 06m 22s.xml">
+      <configuration name="SortTest.test_heapSort" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BinarySearchUtilTest_test1 - 2019.05.28 at 22h 06m 14s.xml">
-      <configuration name="BinarySearchUtilTest.test1" configurationId="JUnit" />
+    <history-entry file="SortTest_test_heapSort - 2019.06.16 at 22h 07m 22s.xml">
+      <configuration name="SortTest.test_heapSort" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortTest_test_countingSort - 2019.06.02 at 17h 20m 01s.xml">
-      <configuration name="SortTest.test_countingSort" configurationId="JUnit" />
+    <history-entry file="SortTest_test_heapSort - 2019.06.16 at 22h 08m 39s.xml">
+      <configuration name="SortTest.test_heapSort" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortTest_test_countingSort - 2019.06.02 at 17h 21m 04s.xml">
-      <configuration name="SortTest.test_countingSort" configurationId="JUnit" />
+    <history-entry file="SortTest_test_heapSort - 2019.06.16 at 22h 10m 02s.xml">
+      <configuration name="SortTest.test_heapSort" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortTest_test_countingSort - 2019.06.02 at 17h 21m 18s.xml">
-      <configuration name="SortTest.test_countingSort" configurationId="JUnit" />
+    <history-entry file="SortTest_test_heapSort - 2019.06.16 at 22h 12m 03s.xml">
+      <configuration name="SortTest.test_heapSort" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LRUCacheTest_test - 2019.06.07 at 16h 15m 30s.xml">
-      <configuration name="LRUCacheTest.test" configurationId="JUnit" />
+    <history-entry file="SortTest_test_heapSort - 2019.06.16 at 22h 12m 46s.xml">
+      <configuration name="SortTest.test_heapSort" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LRUCacheTest_test - 2019.06.07 at 16h 16m 14s.xml">
-      <configuration name="LRUCacheTest.test" configurationId="JUnit" />
+    <history-entry file="SortTest_test_heapSort - 2019.06.16 at 22h 15m 17s.xml">
+      <configuration name="SortTest.test_heapSort" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LRUCacheTest_test - 2019.06.07 at 16h 30m 08s.xml">
-      <configuration name="LRUCacheTest.test" configurationId="JUnit" />
+    <history-entry file="SortTest_test_heapSort - 2019.06.16 at 22h 17m 46s.xml">
+      <configuration name="SortTest.test_heapSort" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LRUCacheTest_test - 2019.06.07 at 16h 30m 25s.xml">
-      <configuration name="LRUCacheTest.test" configurationId="JUnit" />
+    <history-entry file="SortTest_test_heapSort - 2019.06.16 at 22h 18m 04s.xml">
+      <configuration name="SortTest.test_heapSort" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69405000" />
+    <option name="totallyTimeSpent" value="78710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989339" visible="true" weight="0.25178826" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989339" weight="0.2653791" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.5010661" side_tool="true" weight="0.25679544" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44750655" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39763778" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.32900432" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32677165" />
+      <window_info anchor="bottom" id="Duplicate detector" order="14" weight="0.32939634" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Gradle" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3297568" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989339" weight="0.2653791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -481,40 +544,6 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3297568" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989339" visible="true" weight="0.2746781" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.5010661" side_tool="true" weight="0.25679544" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40981242" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3982684" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.32900432" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32756132" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3297568" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +551,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="计数排序" />
-    <option name="LAST_COMMIT_MESSAGE" value="计数排序" />
+    <MESSAGE value="使用单链表实现LRU缓存淘汰测了" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用单链表实现LRU缓存淘汰测了" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -599,20 +629,16 @@
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/yuanfy/demo/utils/SortTest.java</url>
+          <line>96</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/lang/Number.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -856,35 +882,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runners/ParentRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-363">
-          <caret line="327" selection-start-line="327" selection-end-line="327" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/Assert.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="631" selection-start-line="631" selection-end-line="631" />
           <folding>
             <element signature="e#24178#24179#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#91536#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -899,24 +902,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yuanfy/demo/utils/BinarySearchUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yuanfy/demo/struct/linklist/SingleLinkListTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1958">
-          <caret line="89" column="25" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yuanfy/demo/utils/SortUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6182">
-          <caret line="281" column="1" selection-start-line="281" selection-start-column="1" selection-end-line="281" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yuanfy/demo/utils/SortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="82" column="11" selection-start-line="82" selection-start-column="11" selection-end-line="82" selection-end-column="11" />
+        <state relative-caret-position="2926">
+          <caret line="135" column="14" selection-start-line="135" selection-start-column="14" selection-end-line="135" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -930,36 +919,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yuanfy/demo/struct/linklist/SingleLinkListTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yuanfy/demo/struct/linklist/SingleLinkList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="135" column="14" selection-start-line="135" selection-start-column="14" selection-end-line="135" selection-end-column="14" />
+        <state relative-caret-position="7238">
+          <caret line="331" column="5" selection-start-line="323" selection-start-column="4" selection-end-line="331" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yuanfy/demo/cache/LRUCacheTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yuanfy/demo/struct/linklist/SingleLinkList.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="331" column="5" selection-start-line="323" selection-start-column="4" selection-end-line="331" selection-end-column="5" />
+        <state relative-caret-position="513">
+          <caret line="643" column="34" selection-start-line="643" selection-start-column="34" selection-end-line="643" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#91536#0" expanded="true" />
+            <element signature="e#14631#15535#0" />
+            <element signature="e#15902#16247#0" />
+            <element signature="e#69028#69029#0" expanded="true" />
+            <element signature="e#69079#69080#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/util/LinkedHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="171" column="33" selection-start-line="171" selection-start-column="33" selection-end-line="171" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#29576#0" expanded="true" />
+            <element signature="e#20822#21991#0" />
+            <element signature="e#23172#24152#0" />
+            <element signature="e#25358#27069#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar!/java/util/LinkedHashMap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#6755#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/util/LinkedHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3102">
+          <caret line="164" column="37" selection-start-line="164" selection-start-column="26" selection-end-line="164" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yuanfy/demo/utils/BinarySearchUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1958">
+          <caret line="89" column="25" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yuanfy/demo/cache/LRUCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
+        <state relative-caret-position="1936">
           <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yuanfy/demo/cache/LRUCacheTest.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runners/ParentRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="328" selection-start-line="328" selection-end-line="328" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/EachTestNotifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yuanfy/demo/utils/SortUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="265" column="5" selection-start-line="265" selection-start-column="5" selection-end-line="265" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yuanfy/demo/utils/SortTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="113" column="20" selection-start-line="113" selection-start-column="20" selection-end-line="113" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yuanfy/demo/struct/heap/Heap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="75" column="29" lean-forward="true" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
+          <folding>
+            <element signature="e#1715#1716#0" expanded="true" />
+            <element signature="e#1743#1744#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -967,9 +1052,81 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>com.yuanfy.learning-demo</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Gradle: junit:junit:4.12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
