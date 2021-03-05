@@ -4,6 +4,15 @@ import com.yuanfy.demo.struct.linklist.SingleLinkList;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.function.Function;
+
 /**
  * @author maple.yuan
  * @date 2019-04-04 23:29
@@ -126,14 +135,83 @@ public class SingleLinkListTest {
 
     @Test
     public void test_removeNthFromEnd() {
-        Integer[] arr = {10, 0, 2, 1, 3, 7, 4, 9, 8, 6, 5};
+        Integer[] arr = {10,9,8,7,6,5,4,3,2,1,0};
         SingleLinkList<Integer> list = new SingleLinkList<>();
         for (Integer integer : arr) {
             list.addFirst(integer);
         }
-        Assert.assertEquals(list.get(6).intValue(), 3);
+        Assert.assertEquals(list.get(6).intValue(), 6);
+        //list.removeNthFromEnd(5);
+       // Assert.assertEquals(list.get(6).intValue(), 1);
+
         list.removeNthFromEnd(5);
         list.printLinkList();
-        Assert.assertEquals(list.get(6).intValue(), 1);
+    }
+
+    @Test
+    public void test() {
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("2");
+        list.add("3");
+        list.add("4");
+        list.add("5");
+        /*for (String item : list) {
+            if (item.equals("4")) {
+                System.out.println(item);
+                list.remove(item);
+            }
+        }
+        System.out.println(list);*/
+
+        Iterator<String> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            String item = iterator.next();
+            if (item.equals("3")) {
+                System.out.println(item);
+                iterator.remove();
+            }
+        }
+        System.out.println(list);
+
+        Map<String, String> infoMap = new HashMap<>();
+        infoMap.put("name", "Zebe");
+        infoMap.put("site", "www.zebe.me");
+        infoMap.put("email", "zebe@vip.qq.com");
+        infoMap.forEach((key, value) -> {
+            System.out.println(key + " : " + value);
+        });
+    }
+
+    @Test
+    public void test_fail_fast() {
+        Map<String, String> premiumPhone = new HashMap<>();
+        premiumPhone.put("Apple", "iPhone");
+        premiumPhone.put("HTC", "HTC one");
+        premiumPhone.put("Samsung", "S5");
+
+
+        Iterator iterator = premiumPhone.entrySet().iterator();
+
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+            premiumPhone.put("Sony", "Xperia Z");
+            //iterator.remove();
+        }
+    }
+
+    @Test
+    public void test_fail_safe() {
+        CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        Iterator iterator = list.iterator();
+
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+            list.add(4);
+            //iterator.remove();
+        }
     }
 }

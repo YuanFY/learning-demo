@@ -29,7 +29,7 @@ public class BinarySearchUtil {
     }
 
     /**
-     * 求x的平方根
+     * 求x的最大平方根
      * @param x
      * @return
      */

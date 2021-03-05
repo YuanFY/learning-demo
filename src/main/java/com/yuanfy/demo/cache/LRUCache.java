@@ -13,14 +13,14 @@ public class LRUCache<T> {
      */
     public Node<T> head;
 
-    private int capaticy;
+    private int capacity;
 
     private int size;
 
-    public LRUCache(int capaticy) {
+    public LRUCache(int capacity) {
         // 头节点
-        head = new Node<T>();
-        this.capaticy = capaticy;
+        head = new Node<>();
+        this.capacity = capacity;
         size = 0;
     }
 
@@ -32,7 +32,7 @@ public class LRUCache<T> {
         }
         Node<T> node = new Node<T>(ele);
         // 2、判断是否还有容量
-        if (size < capaticy) {
+        if (size < capacity) {
             // 还有容量则直接插入表头
             addFirstNode(node);
             size ++;
