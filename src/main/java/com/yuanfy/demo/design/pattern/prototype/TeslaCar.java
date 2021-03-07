@@ -5,6 +5,8 @@ package com.yuanfy.demo.design.pattern.prototype;
  * @date 2021-02-28 12:10
  */
 public class TeslaCar implements Cloneable {
+
+    public static final String CAR_NAME_PREFIX = "tesla";
     private String name;
 
     private String type;
